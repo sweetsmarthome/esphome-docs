@@ -49,19 +49,39 @@ with the following:
 Mac
 ---
 
-There are no tested installation instructions for Mac. ESPHome does support
-Mac & will run with no problem.
+ESPHome does support Mac & will run with no problem. Your macOS version probably 
+already has Python 3 installed. Confirm that it is installed.
 
-Contributions are welcome!
+.. code-block:: console
 
-The process will likely be similar to Windows. You can install Python from the
-official site, and then install ESPHome with ``pip3 install esphome``.  You can
-then test that things are properly installed with the following:
+    $ which python3
+    /usr/bin/python3
+    
+However it will not work without Xcode.app installed. Install Xcode.app from 
+App Store application if not yet. Xcode is free but your Apple ID is required. 
+When Xcode is installed, check tat it is at least version 3.7:
+
+.. code-block:: console
+
+    $ python3 --version
+    Python 3.8.9
+
+You may be asked to agree Xcode license at the first time, then type ``agree``. 
+You can go ahead and install ESPHome:
+
+.. code-block:: console
+
+    $ pip3 install --user esphome
+
+It will be installed in ~/Library/Python/3.8/bin/ directory (3.8 is the version). 
+If you don't want to type the full-path, you need to add the binary to your ``PATH`` 
+using ``export PATH=$PATH:$HOME/Library/Python/3.8/bin``. You can then test that 
+things are properly installed with the following:
 
 .. code-block:: console
 
     $ esphome version
-    Version: 2021.12.3
+    Version: 2022.6.2
 
 Linux
 -----
