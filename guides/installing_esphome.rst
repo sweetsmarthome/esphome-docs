@@ -81,7 +81,7 @@ In that case, follow the instruction shown in the error message and type:
 
 and try ``pip3 install --user esphome`` command again. ESPHome will be installed in 
 ~/Library/Python/3.8/bin directory (3.8 is the version number of Python 3 with macOS 12).
-If you don't want to type full path to ESPHome programs, you can run 
+If you don't want to type the full path to ESPHome programs, you can run 
 ``echo 'export PATH=$PATH:$HOME/Library/Python/3.8/bin' >> $HOME/.zshrc``, 
 then close and re-open your Terminal window.
 
