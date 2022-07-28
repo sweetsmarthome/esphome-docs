@@ -58,7 +58,7 @@ Your macOS probably already has Python 3 installed.
 
 However it does not work until Xcode is installed. Open App Store.app and 
 download Xcode.app if not yet. Agreement to Xcode License is also required. 
-Just open Xcode.app, and push agree button at the starting dialog window.
+Just open Xcode.app, and press the agree button in the initial dialog window.
 Once the python3 is activated, confirm that it is at least version 3.7:
 
 .. code-block:: console
