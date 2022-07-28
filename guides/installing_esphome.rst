@@ -79,7 +79,7 @@ the instruction shown in the error message and type:
 
     % pip3 install --upgrade pip
 
-and try 'pip3 install --user esphome' command again. ESPHome will be installed in 
+and try ``pip3 install --user esphome`` command again. ESPHome will be installed in 
 ~/Library/Python/3.8/bin directory (3.8 is the version number of Python 3).
 If you don't want to type full path to ESPHome programs, you can run 
 ``echo 'export PATH=$PATH:$HOME/Library/Python/3.8/bin' >> $HOME/.zshrc``, 
