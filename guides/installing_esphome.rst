@@ -49,79 +49,48 @@ with the following:
 Mac
 ---
 
-There are no tested installation instructions for Mac. ESPHome does support
-Mac & will run with no problem.
-
-Contributions are welcome!
-
-The process will likely be similar to Windows. You can install Python from the
-official site, and then install ESPHome with ``pip3 install esphome``.  You can
-then test that things are properly installed with the following:
+Your macOS probably already has Python 3 installed. 
 
 .. code-block:: console
 
-    $ esphome version
-    Version: 2021.12.3
+    % which python3
+    /usr/bin/python3
 
------------
-memo
+However it does not work until Xcode is installed. Open App Store.app and 
+download Xcode.app if not yet. Agreement to Xcode License is also required. 
+Just open Xcode.app, and push agree button at the starting dialog window.
+Once the python3 is activated, confirm that it is at least version 3.7:
 
+.. code-block:: console
 
-% which python
-python not found
+    % python3 --version
+    Python 3.8.9
 
-% which python3
-/usr/bin/python3
+Looks good? You can go ahead and install ESPHome:
 
-% python3 --version
-xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+.. code-block:: console
 
-% python3 --version
-xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+    % pip3 install --user esphome
 
-% python3 --version
+You may get an error message that your pip is not the latest one. In that case, follow 
+the instruction shown in the error message and type:
 
+.. code-block:: console
 
-You have not agreed to the Xcode license agreements. You must agree to both license agreements below in order to use Xcode.
+    % pip3 install --upgrade pip
 
-Press the 'return' key to view the license agreements at '/Applications/Xcode.app/Contents/Resources/English.lproj/License.rtf'
+and try 'pip3 install --user esphome' command again. ESPHome will be installed in 
+~/Library/Python/3.8/bin directory (3.8 is the version number of Python 3).
+If you don't want to type full path to ESPHome programs, you can run 
+``echo 'export PATH=$PATH:$HOME/Library/Python/3.8/bin' >> $HOME/.zshrc``, 
+then close and re-open your Terminal window.
 
+At this point, you should be able confirm that ESPHome has been successfully installed:
 
-Agreeing to the Xcode/iOS license requires admin privileges, please run “sudo xcodebuild -license” and then retry this command.
+.. code-block:: console
 
-
-
-
-You have not agreed to the Xcode license agreements. You must agree to both license agreements below in order to use Xcode.
-
-Press the 'return' key to view the license agreements at '/Applications/Xcode.app/Contents/Resources/English.lproj/License.rtf'
-
-% python3 --version
-2022-07-28 23:32:45.901 xcodebuild[2064:102337] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
-2022-07-28 23:32:45.901 xcodebuild[2064:102337] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
-Python 3.8.9
-
-% python3 --version
-Python 3.8.9
-% pip3 --version
-pip 20.2.3 from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/site-packages/pip (python 3.8)
-
-pip3 install -user esphome
-
-Error がでるので、pipをアップグレードする　　
-
-% pip3 install --upgrade pip
-
-export PATH=$PATH:$HOME/Library/Python/3.8/bin/
-
-% echo 'export PATH=$PATH:$HOME/Library/Python/3.8/bin/' >> $HOME/.zshrc
-
-
-
-
-
-
-
+    % esphome version       
+    Version: 2022.6.2
 
 Linux
 -----
