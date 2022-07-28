@@ -63,6 +63,63 @@ then test that things are properly installed with the following:
     $ esphome version
     Version: 2021.12.3
 
+-----------
+memo
+
+Last login: Thu Jul 28 16:51:31 on console
+siio@mini ~ % which python
+python not found
+siio@mini ~ % which python3
+/usr/bin/python3
+siio@mini ~ % python3 --version
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+siio@mini ~ % python3 --version
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+siio@mini ~ % python3 --version
+
+
+You have not agreed to the Xcode license agreements. You must agree to both license agreements below in order to use Xcode.
+
+Press the 'return' key to view the license agreements at '/Applications/Xcode.app/Contents/Resources/English.lproj/License.rtf'
+
+
+Agreeing to the Xcode/iOS license requires admin privileges, please run “sudo xcodebuild -license” and then retry this command.
+
+
+siio@mini ~ % sudo xcodebuild -license
+Password:
+
+
+You have not agreed to the Xcode license agreements. You must agree to both license agreements below in order to use Xcode.
+
+Press the 'return' key to view the license agreements at '/Applications/Xcode.app/Contents/Resources/English.lproj/License.rtf'
+
+% python3 --version
+2022-07-28 23:32:45.901 xcodebuild[2064:102337] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+2022-07-28 23:32:45.901 xcodebuild[2064:102337] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+Python 3.8.9
+siio@mini ~ % python3 --version
+Python 3.8.9
+% pip3 --version
+pip 20.2.3 from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/site-packages/pip (python 3.8)
+
+pip3 install -user esphome
+
+Error がでるので、pipをアップグレードする　　
+
+% pip3 install --upgrade pip
+
+export PATH=$PATH:$HOME/Library/Python/3.8/bin/
+
+% echo 'export PATH=$PATH:$HOME/Library/Python/3.8/bin/' >> $HOME/.zshrc
+
+
+
+
+
+
+
+
 Linux
 -----
 
