@@ -72,8 +72,8 @@ Looks good? You can go ahead and install ESPHome:
 
     % pip3 install --user esphome
 
-You may get an error message that your pip is not the latest one. In that case, follow 
-the instruction shown in the error message and type:
+You may get an error message saying that your pip is not the latest one. 
+In that case, follow the instruction shown in the error message and type:
 
 .. code-block:: console
 
